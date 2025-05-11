@@ -56,10 +56,10 @@
         layer_1 {
             bindings = <
 &kp GRAVE   &kp F1      &kp F2      &kp F3      &kp F4      &kp F5       &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
-&trans      &kp GRAVE   &kp PG_UP   &kp UP      &kp PG_DN   &mkp MB4     &mmv MOVE_DOWN   &trans           &kp END          &trans      &kp HOME   &kp MINUS         &kp EQUAL
-&trans      &kp TILDE   &kp LEFT    &kp DOWN    &kp RIGHT   &mkp MB5     &mmv MOVE_LEFT   &trans           &trans           &trans      &trans     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans      &trans      &trans      &trans      &trans      &trans       &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
-&kp C_MUTE  &trans      &trans      &trans      &kp SPACE   &trans       &mkp LCLK        &trans           &trans           &trans      &trans     &trans
+&LC(C)      &kp GRAVE   &kp PG_UP   &kp UP      &kp PG_DN   &mkp MB4     &mmv MOVE_DOWN   &trans           &kp N7           &kp N8      &kp N9     &trans            &kp EQUAL
+&LC(V)      &kp TILDE   &kp LEFT    &kp DOWN    &kp RIGHT   &mkp MB5     &mmv MOVE_LEFT   &trans           &kp N4           &kp N5      &kp N6     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans      &trans      &trans      &trans      &trans      &trans       &mmv MOVE_RIGHT  &trans           &kp N1           &kp N2      &kp N3     &trans            &trans
+kp C_MUTE   &kp ENTER   &trans      &trans      &kp SPACE   &trans       &mkp LCLK        &trans           &kp N0           &kp DOT     &trans     &trans
             >;
 
             display-name = "LAYER1";
