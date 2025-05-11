@@ -27,6 +27,48 @@
     trigger-period-ms = <16>;
 };
 
+/ {
+    combos {
+        compatible = "zmk,combos";
+        # Layers
+        combo_toglayer1 {
+            timeout-ms = <20>;
+            key-positions = <15 16>;
+            bindings = <&tog 1>;
+        };
+        combo_toglayer2 {
+            timeout-ms = <20>;
+            key-positions = <24 25>;
+            bindings = <&tog 2>;
+        };
+
+        # Editing 
+        combo_home {
+            timeout-ms = <20>;
+            key-positions = <29 30>;
+            bindings = <&kp HOME>;
+        };
+        combo_end {
+            timeout-ms = <20>;
+            key-positions = <36 37>;
+            bindings = <&kp END>;
+        };
+        combo_delete {
+            timeout-ms = <20>;
+            key-positions = <30 31>;
+            bindings = <&kp DELETE>;
+        };
+
+        # Other
+        combo_refresh {
+            timeout-ms = <20>;
+            key-positions = <17 18>;
+            bindings = <&kp F5>;
+        };
+
+    };
+};
+
 
 / {
 
