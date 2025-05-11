@@ -260,3 +260,16 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+combos:
+- p: [15, 16]
+  k: {t: LAYER1, h: toggle}
+- p: [24, 25]
+  k: {t: LAYER2, h: toggle}
+- p: [29, 30]
+  k: HOME
+- p: [36, 37]
+  k: END
+- p: [30, 31]
+  k: $$mdi:backspace-reverse-outline$$
+- p: [17, 18]
+  k: F5
