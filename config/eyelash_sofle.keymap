@@ -30,7 +30,6 @@
 / {
     combos {
         compatible = "zmk,combos";
-        # Layers
         combo_toglayer1 {
             timeout-ms = <20>;
             key-positions = <15 16>;
@@ -41,8 +40,6 @@
             key-positions = <24 25>;
             bindings = <&tog 2>;
         };
-
-        # Editing 
         combo_home {
             timeout-ms = <20>;
             key-positions = <29 30>;
@@ -58,8 +55,6 @@
             key-positions = <30 31>;
             bindings = <&kp DELETE>;
         };
-
-        # Other
         combo_refresh {
             timeout-ms = <20>;
             key-positions = <17 18>;
