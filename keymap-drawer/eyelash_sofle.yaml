@@ -261,9 +261,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [14, 15]
+- p: [57, 59]
   k: {t: LAYER1, h: toggle}
-- p: [23, 24]
+- p: [56, 60]
   k: {t: LAYER2, h: toggle}
 - p: [28, 29]
   k: HOME
