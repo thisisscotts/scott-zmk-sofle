@@ -31,12 +31,12 @@
     combos {
         compatible = "zmk,combos";
         combo_toglayer1 {
-            timeout-ms = <22>;
+            timeout-ms = <30>;
             key-positions = <57 59>;
             bindings = <&tog 1>;
         };
         combo_toglayer2 {
-            timeout-ms = <22>;
+            timeout-ms = <30>;
             key-positions = <56 60>;
             bindings = <&tog 2>;
         };
@@ -76,7 +76,7 @@
         work_email: work_email {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <10>;
+            wait-ms = <5>;
             bindings
                 = <&macro_tap &kp S &kp C &kp O &kp T &kp T &kp M &kp O &kp R &kp G &kp A &kp N &kp AT &kp C &kp H &kp E &kp V &kp R &kp O &kp N &kp DOT &kp C &kp O &kp M >;
         };
