@@ -148,8 +148,8 @@ layers:
   - $$mdi:bluetooth-off$$
   - BT CLR ALL
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB HUI
+  - RGB HUD
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -261,15 +261,15 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [15, 16]
+- p: [14, 15]
   k: {t: LAYER1, h: toggle}
-- p: [24, 25]
+- p: [23, 24]
   k: {t: LAYER2, h: toggle}
-- p: [29, 30]
+- p: [28, 29]
   k: HOME
-- p: [36, 37]
+- p: [35, 36]
   k: END
-- p: [30, 31]
+- p: [29, 30]
   k: $$mdi:backspace-reverse-outline$$
-- p: [17, 18]
+- p: [16, 17]
   k: F5
