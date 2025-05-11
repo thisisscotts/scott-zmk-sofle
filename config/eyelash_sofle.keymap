@@ -31,32 +31,32 @@
     combos {
         compatible = "zmk,combos";
         combo_toglayer1 {
-            timeout-ms = <20>;
-            key-positions = <14 15>;
+            timeout-ms = <22>;
+            key-positions = <57 59>;
             bindings = <&tog 1>;
         };
         combo_toglayer2 {
-            timeout-ms = <20>;
-            key-positions = <23 24>;
+            timeout-ms = <22>;
+            key-positions = <56 60>;
             bindings = <&tog 2>;
         };
         combo_home {
-            timeout-ms = <20>;
+            timeout-ms = <22>;
             key-positions = <28 29>;
             bindings = <&kp HOME>;
         };
         combo_end {
-            timeout-ms = <20>;
+            timeout-ms = <22>;
             key-positions = <35 36>;
             bindings = <&kp END>;
         };
         combo_delete {
-            timeout-ms = <20>;
+            timeout-ms = <22>;
             key-positions = <29 30>;
             bindings = <&kp DELETE>;
         };
         combo_refresh {
-            timeout-ms = <20>;
+            timeout-ms = <22>;
             key-positions = <16 17>;
             bindings = <&kp F5>;
         };
