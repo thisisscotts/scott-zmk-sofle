@@ -83,17 +83,17 @@
         combo_plus {
             timeout-ms = <30>;
             bindings = <&kp PLUS>;
-            key-positions = <18 20>;
+            key-positions = <17 21>;
         };
         combo_equals {
             timeout-ms = <30>;
             bindings = <&kp EQUAL>;
-            key-positions = <31 33>;
+            key-positions = <30 34>;
         };
         combo_minus {
             timeout-ms = <30>;
             bindings = <&kp MINUS>;
-            key-positions = <44 46>;
+            key-positions = <43 47>;
         };
     };
 };
@@ -145,7 +145,7 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1      &kp F2      &kp F3      &kp F4      &kp F5       &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
+&kp TILDE   &kp F1      &kp F2      &kp F3      &kp F4      &kp F5       &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
 &kp LC(C)   &kp GRAVE   &kp PG_UP   &kp UP      &kp PG_DN   &mkp MB4     &mmv MOVE_DOWN   &trans           &kp N7           &kp N8      &kp N9     &trans            &kp EQUAL
 &kp LC(V)   &kp TILDE   &kp LEFT    &kp DOWN    &kp RIGHT   &mkp MB5     &mmv MOVE_LEFT   &trans           &kp N4           &kp N5      &kp N6     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &kp ENTER   &trans      &trans      &trans      &trans      &trans       &mmv MOVE_RIGHT  &trans           &kp N1           &kp N2      &kp N3     &trans            &trans
@@ -158,7 +158,7 @@
 
         layer_2 {
             bindings = <
-&kp TILDE       &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3    &bt BT_SEL 4    &trans      &kp F6          &kp F7          &kp F8      &kp F9      &kp F10      &trans
+&kp GRAVE       &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3    &bt BT_SEL 4    &trans      &kp F6          &kp F7          &kp F8      &kp F9      &kp F10      &trans
 &trans          &bt BT_CLR      &bt BT_CLR_ALL  &trans              &rgb_ug RGB_HUI &rgb_ug RGB_HUD &trans      &trans          &trans          &kp F11     &kp F12     &kp UNDER    &kp PLUS
 &trans          &out OUT_USB    &out OUT_BLE    &trans              &rgb_ug RGB_SPI &rgb_ug RGB_SPD &trans      &trans          &trans          &work_email &pers_email &kp LBRC     &kp RBRC
 &rgb_ug RGB_OFF &rgb_ug RGB_ON  &rgb_ug RGB_EFF &rgb_ug RGB_EFR     &rgb_ug RGB_BRI &rgb_ug RGB_BRD &trans      &trans          &trans          &trans      &trans      &trans       &trans
@@ -177,6 +177,9 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
+
+            display-name = "LAYER3";
+            sensor-bindings = <&scroll_encoder>;
         };
     };
 };
