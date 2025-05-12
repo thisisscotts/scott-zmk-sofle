@@ -1,4 +1,4 @@
-- [English](README_EN.md)
+- [English](README.md)
 
 # Update List
 - 2025/05/12
