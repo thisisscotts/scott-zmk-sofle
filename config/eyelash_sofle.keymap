@@ -17,7 +17,7 @@
 
 &msc {
     acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <100>;       // 300
+    time-to-max-speed-ms = <500>;     // 300
     delay-ms = <0>;                   // 0
 };
 
@@ -57,10 +57,44 @@
         };
         combo_refresh {
             timeout-ms = <22>;
-            key-positions = <16 17>;
+            key-positions = <15 16>;
             bindings = <&kp F5>;
         };
-
+        combo_l_curly {
+            timeout-ms = <22>;
+            key-positions = <16 17>;
+            bindings = <&kp LBRC>;
+        };
+        combo_r_curly {
+            timeout-ms = <22>;
+            key-positions = <21 22>;
+            bindings = <&kp RBRC>;
+        };
+        combo_l_bracket {
+            timeout-ms = <22>;
+            key-positions = <41 42>;
+            bindings = <&kp LBKT>;
+        };
+        combo_r_bracket {
+            timeout-ms = <22>;
+            key-positions = <46 47>;
+            bindings = <&kp RBKT>;
+        };
+        combo_plus {
+            timeout-ms = <22>;
+            bindings = <&kp PLUS>;
+            key-positions = <18 20>;
+        };
+        combo_equals {
+            timeout-ms = <22>;
+            bindings = <&kp EQUAL>;
+            key-positions = <31 33>;
+        };
+        combo_equals {
+            timeout-ms = <22>;
+            bindings = <&kp MINUS>;
+            key-positions = <44 46>;
+        };
     };
 };
 
