@@ -66,7 +66,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:backspace-reverse-outline$$
   LAYER1:
-  - {t: '`', s: '~'}
+  - '~'
   - F1
   - F2
   - F3
@@ -131,7 +131,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   LAYER2:
-  - '~'
+  - {t: '`', s: '~'}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
@@ -195,7 +195,7 @@ layers:
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - '&soft_off'
   - $$mdi:progress-download$$
-  '3':
+  LAYER3:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -281,9 +281,9 @@ combos:
   k: {t: '[', s: '{'}
 - p: [47, 48]
   k: {t: ']', s: '}'}
-- p: [18, 20]
+- p: [17, 21]
   k: +
-- p: [31, 33]
+- p: [30, 34]
   k: {t: '=', s: +}
-- p: [44, 46]
+- p: [43, 47]
   k: {h: '-', s: _}
