@@ -17,7 +17,7 @@
 
 &msc {
     acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <500>;     // 300
+    time-to-max-speed-ms = <1000>;    // 300
     delay-ms = <0>;                   // 0
 };
 
@@ -41,57 +41,57 @@
             bindings = <&tog 2>;
         };
         combo_home {
-            timeout-ms = <22>;
+            timeout-ms = <30>;
             key-positions = <28 29>;
             bindings = <&kp HOME>;
         };
         combo_end {
-            timeout-ms = <22>;
+            timeout-ms = <30>;
             key-positions = <35 36>;
             bindings = <&kp END>;
         };
         combo_delete {
-            timeout-ms = <22>;
+            timeout-ms = <30>;
             key-positions = <29 30>;
             bindings = <&kp DELETE>;
         };
         combo_refresh {
-            timeout-ms = <22>;
+            timeout-ms = <30>;
             key-positions = <15 16>;
             bindings = <&kp F5>;
         };
         combo_l_curly {
-            timeout-ms = <22>;
+            timeout-ms = <30>;
             key-positions = <16 17>;
             bindings = <&kp LBRC>;
         };
         combo_r_curly {
-            timeout-ms = <22>;
+            timeout-ms = <30>;
             key-positions = <21 22>;
             bindings = <&kp RBRC>;
         };
         combo_l_bracket {
-            timeout-ms = <22>;
-            key-positions = <41 42>;
+            timeout-ms = <30>;
+            key-positions = <42 43>;
             bindings = <&kp LBKT>;
         };
         combo_r_bracket {
-            timeout-ms = <22>;
-            key-positions = <46 47>;
+            timeout-ms = <30>;
+            key-positions = <47 48>;
             bindings = <&kp RBKT>;
         };
         combo_plus {
-            timeout-ms = <22>;
+            timeout-ms = <30>;
             bindings = <&kp PLUS>;
             key-positions = <18 20>;
         };
         combo_equals {
-            timeout-ms = <22>;
+            timeout-ms = <30>;
             bindings = <&kp EQUAL>;
             key-positions = <31 33>;
         };
         combo_minus {
-            timeout-ms = <22>;
+            timeout-ms = <30>;
             bindings = <&kp MINUS>;
             key-positions = <44 46>;
         };
