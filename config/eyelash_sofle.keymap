@@ -17,12 +17,12 @@
 
 &msc {
     acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <1000>;    // 300
+    time-to-max-speed-ms = <100>;     // 300
     delay-ms = <0>;                   // 0
 };
 
 &mmv {
-    time-to-max-speed-ms = <500>;
+    time-to-max-speed-ms = <1000>;
     acceleration-exponent = <1>;
     trigger-period-ms = <16>;
 };
@@ -31,12 +31,12 @@
     combos {
         compatible = "zmk,combos";
         combo_toglayer1 {
-            timeout-ms = <30>;
+            timeout-ms = <40>;
             key-positions = <57 59>;
             bindings = <&tog 1>;
         };
         combo_toglayer2 {
-            timeout-ms = <30>;
+            timeout-ms = <40>;
             key-positions = <56 60>;
             bindings = <&tog 2>;
         };
