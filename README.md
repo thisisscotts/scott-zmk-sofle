@@ -1,6 +1,6 @@
-- [English](README.md)
-
 # Update List
+- 2025/05/18
+  1. Majority of initial customisations complete
 - 2025/05/12
   1. Forked from AliExpress Seller
 - 2025/03/30
