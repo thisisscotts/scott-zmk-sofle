@@ -26,7 +26,7 @@
 };
 
 &mmv {
-    time-to-max-speed-ms = <1000>;
+    time-to-max-speed-ms = <1500>;
     acceleration-exponent = <1>;
     trigger-period-ms = <16>;
 };
@@ -69,16 +69,28 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_toglayer1 {
+        // Layers
+        combo_tolayer0 {
             timeout-ms = <40>;
-            key-positions = <57 59>;
-            bindings = <&tog 1>;
+            key-positions = <LH0 RH0>;
+            bindings = <&to 0>;
         };
-        combo_toglayer2 {
+        combo_tolayer1 {
             timeout-ms = <40>;
-            key-positions = <56 60>;
-            bindings = <&tog 2>;
+            key-positions = <LH1 RH1>;
+            bindings = <&to 1>;
         };
+        combo_tolayer2 {
+            timeout-ms = <40>;
+            key-positions = <LH0 RH1>;
+            bindings = <&to 2>;
+        };
+        combo_tolayer3 {
+            timeout-ms = <40>;
+            key-positions = <LH1 RH0>;
+            bindings = <&to 3>;
+        };
+        // Navigation
         combo_home {
             timeout-ms = <30>;
             key-positions = <28 29>;
@@ -99,6 +111,7 @@
             key-positions = <15 16>;
             bindings = <&kp F5>;
         };
+        // Symbols
         combo_l_curly {
             timeout-ms = <30>;
             key-positions = <16 17>;
@@ -121,6 +134,7 @@
         };
         combo_plus {
             timeout-ms = <30>;
+            require-prior-idle-ms = <50>;  // testing prior idle time on "+"
             bindings = <&kp PLUS>;
             key-positions = <17 21>;
         };
@@ -199,7 +213,7 @@
             bindings = <
 &kp GRAVE       &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3    &bt BT_SEL 4    &trans      &kp F6          &kp F7          &kp F8      &kp F9      &kp F10      &trans
 &trans          &bt BT_CLR      &bt BT_CLR_ALL  &trans              &rgb_ug RGB_HUI &rgb_ug RGB_HUD &trans      &trans          &trans          &kp F11     &kp F12     &kp UNDER    &kp PLUS
-&trans          &out OUT_USB    &out OUT_BLE    &trans              &rgb_ug RGB_SPI &rgb_ug RGB_SPD &trans      &trans          &trans          &work_email &pers_email &kp LBRC     &kp RBRC
+&out OUT_USB    &out OUT_BLE    &trans          &trans              &rgb_ug RGB_SPI &rgb_ug RGB_SPD &trans      &trans          &trans          &work_email &pers_email &kp LBRC     &kp RBRC
 &rgb_ug RGB_OFF &rgb_ug RGB_ON  &rgb_ug RGB_EFF &rgb_ug RGB_EFR     &rgb_ug RGB_BRI &rgb_ug RGB_BRD &trans      &trans          &trans          &trans      &trans      &trans       &trans
 &trans          &trans          &trans          &trans              &trans          &trans          &trans      &trans          &trans          &sys_reset  &soft_off   &bootloader
             >;
@@ -210,11 +224,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESC     &kp N1          &kp N2           &kp N3        &kp N4       &kp N5           &kp UP_ARROW     &kp N6     &kp N7         &kp N8       &kp N9           &kp N0                &kp MINUS
+&kp TAB     &kp Q           &kp W            &kp E         &kp R        &kp T            &kp DOWN_ARROW   &kp Y      &kp U          &kp I        &kp O            &kp P                 &kp BSLH
+&kp CAPS    &kp A           &kp S            &kp D         &kp F        &kp G            &kp LEFT_ARROW   &kp H      &kp J          &kp K        &kp L            &kp SEMI              &kp APOS
+&kp LSHFT   &kp Z           &kp X            &kp C         &kp V        &kp B            &kp RIGHT_ARROW  &kp N      &kp M          &kp COMMA    &kp DOT          &kp FSLH              &kp ENTER
+&kp C_MUTE  &kp LCTRL       &kp LEFT_GUI     &kp LEFT_ALT  &mo 1        &kp BACKSPACE    &kp ENTER        &kp SPACE  &mo 2          &trans       &kp RIGHT_SHIFT  &kp DELETE
             >;
 
             display-name = "LAYER3";
