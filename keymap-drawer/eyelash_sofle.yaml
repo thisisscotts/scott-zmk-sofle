@@ -277,6 +277,8 @@ combos:
   k: $$mdi:backspace-reverse-outline$$
 - p: [15, 16]
   k: F5
+- p: [22, 23]
+  k: $$mdi:keyboard-esc$$
 - p: [16, 17]
   k: '{'
 - p: [21, 22]
@@ -285,7 +287,7 @@ combos:
   k: {t: '[', s: '{'}
 - p: [47, 48]
   k: {t: ']', s: '}'}
-- p: [17, 21]
+- p: [30, 34]
   k: +
 - p: [30, 34]
   k: {t: '=', s: +}
