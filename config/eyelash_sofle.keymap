@@ -111,6 +111,11 @@
             key-positions = <15 16>;
             bindings = <&kp F5>;
         };
+        combo_esc {
+            timeout-ms = <30>;
+            key-positions = <RT2 RT3>;
+            bindings = <&kp ESC>;
+        };
         // Symbols
         combo_l_curly {
             timeout-ms = <30>;
@@ -119,7 +124,8 @@
         };
         combo_r_curly {
             timeout-ms = <30>;
-            key-positions = <21 22>;
+            require-prior-idle-ms = <60>;  // testing prior idle time on "}"
+            key-positions = <RT1 RT2>;
             bindings = <&kp RBRC>;
         };
         combo_l_bracket {
@@ -134,9 +140,9 @@
         };
         combo_plus {
             timeout-ms = <30>;
-            require-prior-idle-ms = <50>;  // testing prior idle time on "+"
+            require-prior-idle-ms = <60>;  // testing prior idle time on "+"
+            key-positions = <LM1 RM1>;
             bindings = <&kp PLUS>;
-            key-positions = <17 21>;
         };
         combo_equals {
             timeout-ms = <30>;
