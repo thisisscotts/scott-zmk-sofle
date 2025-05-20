@@ -214,8 +214,8 @@
 &kp C_MUTE  &kp LCTRL       &kp LEFT_GUI     &kp LEFT_ALT  &mo 1        &kp BACKSPACE    &kp ENTER        &kp SPACE  &mo 2          &trans       &kp RIGHT_SHIFT  &kp DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
             display-name = "LAYER0";
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         layer_1 {
@@ -254,7 +254,7 @@
             >;
 
             display-name = "LAYER3";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
     };
 };
