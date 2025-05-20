@@ -141,18 +141,18 @@
         combo_plus {
             timeout-ms = <30>;
             require-prior-idle-ms = <60>;  // testing prior idle time on "+"
-            key-positions = <LM1 RM1>;
+            key-positions = <LT1 RT1>;
             bindings = <&kp PLUS>;
         };
         combo_equals {
             timeout-ms = <30>;
             bindings = <&kp EQUAL>;
-            key-positions = <30 34>;
+            key-positions = <LM1 RM1>;
         };
         combo_minus {
             timeout-ms = <30>;
             bindings = <&kp MINUS>;
-            key-positions = <43 47>;
+            key-positions = <LB1 RB1>;
         };
     };
 };
