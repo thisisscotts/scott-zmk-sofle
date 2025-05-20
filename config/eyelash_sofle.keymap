@@ -69,7 +69,8 @@
 // Combos
 
 #define COMBO_TM_FAST 30
-#define COMBO_TM_SLOW 50
+#define COMBO_TM_SLOW 60
+#define PRIOR_IDLE 80  // testing prior idle time on left/right symbols
 
 / {
     combos {
@@ -124,38 +125,43 @@
         // Symbols
         combo_l_curly {
             timeout-ms = <COMBO_TM_SLOW>;
+            require-prior-idle-ms = <PRIOR_IDLE>;  
             key-positions = <16 17>;
             bindings = <&kp LBRC>;
         };
         combo_r_curly {
             timeout-ms = <COMBO_TM_SLOW>;
-            require-prior-idle-ms = <60>;  // testing prior idle time on "}"
+            require-prior-idle-ms = <PRIOR_IDLE>;
             key-positions = <RT1 RT2>;
             bindings = <&kp RBRC>;
         };
         combo_l_bracket {
             timeout-ms = <COMBO_TM_SLOW>;
+            require-prior-idle-ms = <PRIOR_IDLE>;
             key-positions = <42 43>;
             bindings = <&kp LBKT>;
         };
         combo_r_bracket {
             timeout-ms = <COMBO_TM_SLOW>;
+            require-prior-idle-ms = <PRIOR_IDLE>;
             key-positions = <47 48>;
             bindings = <&kp RBKT>;
         };
         combo_plus {
             timeout-ms = <COMBO_TM_SLOW>;
-            require-prior-idle-ms = <60>;  // testing prior idle time on "+"
+            require-prior-idle-ms = <PRIOR_IDLE>;
             key-positions = <LT1 RT1>;
             bindings = <&kp PLUS>;
         };
         combo_equals {
             timeout-ms = <COMBO_TM_SLOW>;
+            require-prior-idle-ms = <PRIOR_IDLE>;
             bindings = <&kp EQUAL>;
             key-positions = <LM1 RM1>;
         };
         combo_minus {
             timeout-ms = <COMBO_TM_SLOW>;
+            require-prior-idle-ms = <PRIOR_IDLE>;
             bindings = <&kp MINUS>;
             key-positions = <LB1 RB1>;
         };
