@@ -70,7 +70,7 @@
 
 #define COMBO_TM_FAST 30
 #define COMBO_TM_SLOW 60
-#define PRIOR_IDLE 80  // testing prior idle time on left/right symbols
+#define PRIOR_IDLE 100  // testing prior idle time on left/right symbols
 
 / {
     combos {
