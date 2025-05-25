@@ -173,6 +173,33 @@
     };
 };
 
+// Tap dances
+
+/ {
+    behaviors {
+		tdl0: tap_dance_lyr_0 {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&mo 0>, <&to 0>;
+		};
+		tdl1: tap_dance_lyr_1 {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&mo 1>, <&to 1>;
+		};
+		tdl2: tap_dance_lyr_2 {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&mo 2>, <&to 2>;
+		};
+    };
+};
+
+// Macros
+
 / {
     macros {
         pers_email: pers_email {
@@ -207,11 +234,11 @@
 
         layer0 {
             bindings = <
-&kp ESC     &kp N1          &kp N2           &kp N3        &kp N4       &kp N5           &kp UP_ARROW     &kp N6     &kp N7         &kp N8       &kp N9           &kp N0                &kp MINUS
-&kp TAB     &kp Q           &kp W            &kp E         &kp R        &kp T            &kp DOWN_ARROW   &kp Y      &kp U          &kp I        &kp O            &kp P                 &kp BSLH
-&kp CAPS    &hml LEFT_GUI A &hml LEFT_ALT S  &hml LSHFT D  &hml LCTRL F &kp G            &kp LEFT_ARROW   &kp H      &hmr LCTRL J   &hmr LSHFT K &hmr LEFT_ALT L  &hmr LEFT_GUI SEMI    &kp APOS
-&kp LSHFT   &kp Z           &kp X            &kp C         &kp V        &kp B            &kp RIGHT_ARROW  &kp N      &kp M          &kp COMMA    &kp DOT          &kp FSLH              &kp ENTER
-&kp C_MUTE  &kp LCTRL       &kp LEFT_GUI     &kp LEFT_ALT  &mo 1        &kp BACKSPACE    &kp ENTER        &kp SPACE  &mo 2          &trans       &kp RIGHT_SHIFT  &kp DELETE
+&kp ESC     	&kp N1          &kp N2          &kp N3          &kp N4       &kp N5     &kp UP     &kp N6     &kp N7         &kp N8       &kp N9        &kp N0            &kp MINUS
+&kp TAB     	&kp Q           &kp W           &kp E           &kp R        &kp T      &kp DOWN   &kp Y      &kp U          &kp I        &kp O         &kp P             &kp BSLH
+&kp CAPS    	&hml LGUI A     &hml LATL S		&hml LSHFT D    &hml LCTRL F &kp G      &kp LEFT   &kp H      &hmr LCTRL J   &hmr LSHFT K &hmr LATL L	&hmr LGUI SEMI    &kp APOS
+&kp LSHFT   	&kp Z           &kp X           &kp C           &kp V        &kp B      &kp RIGHT  &kp N      &kp M          &kp COMMA    &kp DOT       &kp FSLH          &kp ENTER
+&kp C_MUTE  	&kp LCTRL       &kp LGUI        &kp LATL        &tdl1        &kp BSPC   &kp ENTER  &kp SPACE  &tdl2          &trans       &kp RSHFT		&kp DELETE
             >;
 
             display-name = "LAYER0";
@@ -220,11 +247,11 @@
 
         layer_1 {
             bindings = <
-&kp TILDE   &kp F1      &kp F2      &kp F3      &kp F4      &kp F5       &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
-&kp LC(C)   &kp GRAVE   &kp PG_UP   &kp UP      &kp PG_DN   &mkp MB4     &mmv MOVE_DOWN   &trans           &kp N7           &kp N8      &kp N9     &trans            &kp EQUAL
-&kp LC(V)   &kp TILDE   &kp LEFT    &kp DOWN    &kp RIGHT   &mkp MB5     &mmv MOVE_LEFT   &trans           &kp N4           &kp N5      &kp N6     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp ENTER   &trans      &trans      &trans      &trans      &trans       &mmv MOVE_RIGHT  &trans           &kp N1           &kp N2      &kp N3     &trans            &trans
-&kp C_MUTE  &trans      &trans      &trans      &trans      &kp SPACE    &mkp LCLK        &trans           &kp N0           &kp DOT     &trans     &trans
+&kp TILDE   	&kp F1      &kp F2      &kp F3      &kp F4      &kp F5		&mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
+&kp LC(C)   	&kp GRAVE   &kp PG_UP   &kp UP      &kp PG_DN   &mkp MB4	&mmv MOVE_DOWN   &trans           &kp N7           &kp N8      &kp N9     &trans            &kp EQUAL
+&kp LC(V)   	&kp TILDE   &kp LEFT    &kp DOWN    &kp RIGHT   &mkp MB5	&mmv MOVE_LEFT   &trans           &kp N4           &kp N5      &kp N6     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp ENTER   	&trans      &trans      &trans      &trans      &trans		&mmv MOVE_RIGHT  &trans           &kp N1           &kp N2      &kp N3     &trans            &trans
+&kp C_MUTE  	&trans      &trans      &trans      &trans      &tdl0		&mkp LCLK        &trans           &kp N0           &kp DOT     &trans     &trans
             >;
 
             display-name = "LAYER1";
@@ -233,11 +260,11 @@
 
         layer_2 {
             bindings = <
-&kp GRAVE       &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3    &bt BT_SEL 4    &trans      &kp F6          &kp F7          &kp F8      &kp F9      &kp F10      &trans
-&trans          &bt BT_CLR      &bt BT_CLR_ALL  &trans              &rgb_ug RGB_HUI &rgb_ug RGB_HUD &trans      &trans          &trans          &kp F11     &kp F12     &kp UNDER    &kp PLUS
-&out OUT_USB    &out OUT_BLE    &trans          &trans              &rgb_ug RGB_SPI &rgb_ug RGB_SPD &trans      &trans          &trans          &work_email &pers_email &kp LBRC     &kp RBRC
-&rgb_ug RGB_OFF &rgb_ug RGB_ON  &rgb_ug RGB_EFF &rgb_ug RGB_EFR     &rgb_ug RGB_BRI &rgb_ug RGB_BRD &trans      &trans          &trans          &trans      &trans      &trans       &trans
-&trans          &trans          &trans          &trans              &trans          &trans          &trans      &trans          &trans          &sys_reset  &soft_off   &bootloader
+&kp GRAVE		&bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2	&bt BT_SEL 3	&bt BT_SEL 4	&trans      &kp F6          &kp F7          &kp F8      &kp F9      &kp F10      &trans
+&trans          &bt BT_CLR      &bt BT_CLR_ALL  &trans			&rgb_ug RGB_HUI	&rgb_ug RGB_HUD	&trans      &trans          &trans          &kp F11     &kp F12     &kp UNDER    &kp PLUS
+&out OUT_USB    &out OUT_BLE    &trans          &trans			&rgb_ug RGB_SPI	&rgb_ug RGB_SPD	&trans      &trans          &trans          &work_email &pers_email &kp LBRC     &kp RBRC
+&rgb_ug RGB_OFF &rgb_ug RGB_ON  &rgb_ug RGB_EFF &rgb_ug RGB_EFR	&rgb_ug RGB_BRI	&rgb_ug RGB_BRD	&trans      &trans          &trans          &trans      &trans      &trans       &trans
+&trans          &trans          &trans          &trans			&tdl0			&trans			&trans      &trans          &trans          &sys_reset  &soft_off   &bootloader
             >;
 
             display-name = "LAYER2";
@@ -246,11 +273,11 @@
 
         layer_3 {
             bindings = <
-&kp ESC     &kp N1          &kp N2           &kp N3        &kp N4       &kp N5           &kp UP_ARROW     &kp N6     &kp N7         &kp N8       &kp N9           &kp N0                &kp MINUS
-&kp TAB     &kp Q           &kp W            &kp E         &kp R        &kp T            &kp DOWN_ARROW   &kp Y      &kp U          &kp I        &kp O            &kp P                 &kp BSLH
-&kp CAPS    &kp A           &kp S            &kp D         &kp F        &kp G            &kp LEFT_ARROW   &kp H      &kp J          &kp K        &kp L            &kp SEMI              &kp APOS
-&kp LSHFT   &kp Z           &kp X            &kp C         &kp V        &kp B            &kp RIGHT_ARROW  &kp N      &kp M          &kp COMMA    &kp DOT          &kp FSLH              &kp ENTER
-&kp C_MUTE  &kp LCTRL       &kp LEFT_GUI     &kp LEFT_ALT  &mo 1        &kp BACKSPACE    &kp ENTER        &kp SPACE  &mo 2          &trans       &kp RIGHT_SHIFT  &kp DELETE
+&kp ESC     &kp N1          &kp N2		&kp N3		&kp N4       &kp N5		&kp UP     &kp N6     &kp N7         &kp N8       &kp N9           &kp N0                &kp MINUS
+&kp TAB     &kp Q           &kp W		&kp E		&kp R        &kp T		&kp DOWN   &kp Y      &kp U          &kp I        &kp O            &kp P                 &kp BSLH
+&kp CAPS    &kp A           &kp S		&kp D		&kp F        &kp G		&kp LEFT   &kp H      &kp J          &kp K        &kp L            &kp SEMI              &kp APOS
+&kp LSHFT   &kp Z           &kp X		&kp C		&kp V        &kp B		&kp RIGHT  &kp N      &kp M          &kp COMMA    &kp DOT          &kp FSLH              &kp ENTER
+&kp C_MUTE  &kp LCTRL       &kp LGUI	&kp LATL	&mo 1        &kp BSPC	&kp ENTER  &kp SPACE  &mo 2          &trans       &kp RSHFT  &kp DELETE
             >;
 
             display-name = "LAYER3";
