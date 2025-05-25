@@ -238,7 +238,7 @@
 &kp TAB     &kp Q           &kp W            &kp E         &kp R        &kp T            &kp DOWN_ARROW   &kp Y      &kp U          &kp I        &kp O            &kp P                 &kp BSLH
 &kp CAPS    &hml LEFT_GUI A &hml LEFT_ALT S  &hml LSHFT D  &hml LCTRL F &kp G            &kp LEFT_ARROW   &kp H      &hmr LCTRL J   &hmr LSHFT K &hmr LEFT_ALT L  &hmr LEFT_GUI SEMI    &kp APOS
 &kp LSHFT   &kp Z           &kp X            &kp C         &kp V        &kp B            &kp RIGHT_ARROW  &kp N      &kp M          &kp COMMA    &kp DOT          &kp FSLH              &kp ENTER
-&kp C_MUTE  &kp LCTRL       &kp LEFT_GUI     &kp LEFT_ALT  &mo 1        &kp BACKSPACE    &kp ENTER        &kp SPACE  &mo 2          &trans       &kp RIGHT_SHIFT  &kp DELETE
+&kp C_MUTE  &kp LCTRL       &kp LEFT_GUI     &kp LEFT_ALT  &tdl1        &kp BACKSPACE    &kp ENTER        &kp SPACE  &tdl2          &trans       &kp RIGHT_SHIFT  &kp DELETE
             >;
 
             display-name = "LAYER0";
@@ -251,7 +251,7 @@
 &kp LC(C)   &kp GRAVE   &kp PG_UP   &kp UP      &kp PG_DN   &mkp MB4     &mmv MOVE_DOWN   &trans           &kp N7           &kp N8      &kp N9     &trans            &kp EQUAL
 &kp LC(V)   &kp TILDE   &kp LEFT    &kp DOWN    &kp RIGHT   &mkp MB5     &mmv MOVE_LEFT   &trans           &kp N4           &kp N5      &kp N6     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &kp ENTER   &trans      &trans      &trans      &trans      &trans       &mmv MOVE_RIGHT  &trans           &kp N1           &kp N2      &kp N3     &trans            &trans
-&kp C_MUTE  &trans      &trans      &trans      &trans      &kp SPACE    &mkp LCLK        &trans           &kp N0           &kp DOT     &trans     &trans
+&kp C_MUTE  &trans      &trans      &trans      &tdl0 		&kp SPACE    &mkp LCLK        &trans           &kp N0           &kp DOT     &trans     &trans
             >;
 
             display-name = "LAYER1";
@@ -264,7 +264,7 @@
 &trans          &bt BT_CLR      &bt BT_CLR_ALL  &trans              &rgb_ug RGB_HUI &rgb_ug RGB_HUD &trans      &trans          &trans          &kp F11     &kp F12     &kp UNDER    &kp PLUS
 &out OUT_USB    &out OUT_BLE    &trans          &trans              &rgb_ug RGB_SPI &rgb_ug RGB_SPD &trans      &trans          &trans          &work_email &pers_email &kp LBRC     &kp RBRC
 &rgb_ug RGB_OFF &rgb_ug RGB_ON  &rgb_ug RGB_EFF &rgb_ug RGB_EFR     &rgb_ug RGB_BRI &rgb_ug RGB_BRD &trans      &trans          &trans          &trans      &trans      &trans       &trans
-&trans          &trans          &trans          &trans              &trans          &trans          &trans      &trans          &trans          &sys_reset  &soft_off   &bootloader
+&trans          &trans          &trans          &trans              &trans          &tdl0			&trans      &trans          &trans          &sys_reset  &soft_off   &bootloader
             >;
 
             display-name = "LAYER2";
