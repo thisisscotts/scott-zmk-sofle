@@ -37,7 +37,8 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5
 #define THUMBS LH4 LH3 LH2 LH1 LH0 RH0 RH1 RH2 RH3 RH4
 
-#define TAPPING_TERM 220 // was 280ms. testing shorter tapping term
+#define TAPPING_TERM 200 // was 280ms. testing shorter tapping term
+#define QUICK_TAP_MS 175
 
 / {
     behaviors {
@@ -47,7 +48,7 @@
             flavor = "balanced";
             require-prior-idle-ms = <150>;
             tapping-term-ms = <TAPPING_TERM>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <QUICK_TAP_MS>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
@@ -58,7 +59,7 @@
             flavor = "balanced";
             require-prior-idle-ms = <150>;
             tapping-term-ms = <TAPPING_TERM>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <QUICK_TAP_MS>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
@@ -70,7 +71,7 @@
 
 #define COMBO_TM_FAST 30
 #define COMBO_TM_SLOW 60
-#define PRIOR_IDLE 100  // testing prior idle time on left/right symbols
+#define PRIOR_IDLE 125
 
 / {
     combos {
@@ -100,25 +101,25 @@
         combo_home {
             timeout-ms = <COMBO_TM_FAST>;
             require-prior-idle-ms = <PRIOR_IDLE>;
-            key-positions = <28 29>;
+            key-positions = <LM3 LM2>;
             bindings = <&kp HOME>;
         };
         combo_end {
             timeout-ms = <COMBO_TM_FAST>;
             require-prior-idle-ms = <PRIOR_IDLE>;
-            key-positions = <35 36>;
+            key-positions = <RM2 RM3>;
             bindings = <&kp END>;
         };
         combo_delete {
             timeout-ms = <COMBO_TM_FAST>;
             require-prior-idle-ms = <PRIOR_IDLE>;
-            key-positions = <29 30>;
+            key-positions = <LM2 LM1>;
             bindings = <&kp DELETE>;
         };
         combo_refresh {
             timeout-ms = <COMBO_TM_FAST>;
             require-prior-idle-ms = <PRIOR_IDLE>;
-            key-positions = <15 16>;
+            key-positions = <LT3 LT2>;
             bindings = <&kp F5>;
         };
         combo_esc {
@@ -143,32 +144,32 @@
         combo_l_bracket { //                        [
             timeout-ms = <COMBO_TM_FAST>;
             require-prior-idle-ms = <PRIOR_IDLE>;
-            key-positions = <LB2 LB1>;
+            key-positions = <LB3 LB2>;
             bindings = <&kp LBKT>;
         };
         combo_r_bracket { //                        ]
             timeout-ms = <COMBO_TM_FAST>;
             require-prior-idle-ms = <PRIOR_IDLE>;
-            key-positions = <RB1 RB2>;
+            key-positions = <RB2 RB3>;
             bindings = <&kp RBKT>;
         };
         combo_equals { //                           =
             timeout-ms = <COMBO_TM_SLOW>;
             require-prior-idle-ms = <PRIOR_IDLE>;
+            key-positions = <RB1 RB2>;
             bindings = <&kp EQUAL>;
-            key-positions = <LM1 RM1>;
         };
         combo_plus { //                             +
             timeout-ms = <COMBO_TM_SLOW>;
             require-prior-idle-ms = <PRIOR_IDLE>;
-            key-positions = <LM2 RM2>;
+            key-positions = <LB2 LB1>;
             bindings = <&kp PLUS>;
         };
         combo_minus { //                            -
-            timeout-ms = <COMBO_TM_SLOW>;
+            timeout-ms = <COMBO_TM_FAST>;
             require-prior-idle-ms = <PRIOR_IDLE>;
+            key-positions = <RM1 RM2>;
             bindings = <&kp MINUS>;
-            key-positions = <LM3 RM3>;
         };
     };
 };
