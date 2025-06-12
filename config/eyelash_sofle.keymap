@@ -69,7 +69,7 @@
 
 // Combos
 
-#define COMBO_TM_FAST 28
+#define COMBO_TM_FAST 25
 #define COMBO_TM_SLOW 60
 #define PRIOR_IDLE 125
 
