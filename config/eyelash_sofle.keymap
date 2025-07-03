@@ -38,7 +38,7 @@
 #define THUMBS LH4 LH3 LH2 LH1 LH0 RH0 RH1 RH2 RH3 RH4
 
 #define TAPPING_TERM 280 	// tested down to 200ms. Now reset to original 280
-#define TAPPING_TERM_FAST 200 	// added jfor home row mod shifts
+#define TAPPING_TERM_FAST 180 	// added for home row mod shifts
 #define QUICK_TAP_MS 175
 #define PRIOR_IDLE 200
 
