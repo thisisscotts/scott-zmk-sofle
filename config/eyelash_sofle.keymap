@@ -93,7 +93,7 @@
 
 // Combos
 
-#define COMBO_TM_FAST 22
+#define COMBO_TM_FAST 20
 #define COMBO_TM_SLOW 60
 #define PRIOR_IDLE 125
 
@@ -180,19 +180,19 @@
         combo_equals { //                           =
             timeout-ms = <COMBO_TM_FAST>;
             require-prior-idle-ms = <PRIOR_IDLE>;
-            key-positions = <RB1 RB2>;
+            key-positions = <RM1 RM2>;
             bindings = <&kp EQUAL>;
         };
         combo_plus { //                             +
             timeout-ms = <COMBO_TM_FAST>;
             require-prior-idle-ms = <PRIOR_IDLE>;
-            key-positions = <LB2 LB1>;
+            key-positions = <RB1 RB2>;
             bindings = <&kp PLUS>;
         };
         combo_minus { //                            -
             timeout-ms = <COMBO_TM_FAST>;
             require-prior-idle-ms = <PRIOR_IDLE>;
-            key-positions = <RM1 RM2>;
+            key-positions = <LB2 LB1>;
             bindings = <&kp MINUS>;
         };
     };
