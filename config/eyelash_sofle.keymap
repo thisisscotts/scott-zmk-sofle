@@ -146,12 +146,6 @@
             key-positions = <LT3 LT2>;
             bindings = <&kp F5>;
         };
-        combo_esc {
-            timeout-ms = <COMBO_TM_FAST>;
-            require-prior-idle-ms = <PRIOR_IDLE>;
-            key-positions = <RT2 RT3>;
-            bindings = <&kp ESC>;
-        };
         // Symbols
         combo_l_curly { //                          {
             timeout-ms = <COMBO_TM_FAST>;
