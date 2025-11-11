@@ -37,10 +37,10 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5
 #define THUMBS LH4 LH3 LH2 LH1 LH0 RH0 RH1 RH2 RH3 RH4
 
-#define TAPPING_TERM 280 	// tested down to 200ms. Now reset to original 280
+#define TAPPING_TERM 280 		// tested down to 200ms. Now reset to original 280
 #define TAPPING_TERM_FAST 180 	// added for home row mod shifts
 #define QUICK_TAP_MS 175
-#define PRIOR_IDLE 200
+#define PRIOR_IDLE 100			// changed from 200 to 100ms
 
 / {
     behaviors {
@@ -93,7 +93,7 @@
 
 // Combos
 
-#define COMBO_TM_FAST 20
+#define COMBO_TM_FAST 22
 #define COMBO_TM_SLOW 60
 #define PRIOR_IDLE 125
 
