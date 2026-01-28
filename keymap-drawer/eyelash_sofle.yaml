@@ -78,7 +78,7 @@ layers:
   - F8
   - F9
   - F10
-  - {t: '$$mdi:transfer$$', type: trans}
+  - F11
   - Ctl+C
   - {t: '`', s: '~'}
   - PG UP
@@ -91,7 +91,7 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '=', s: +}
+  - F12
   - Ctl+V
   - '~'
   - $$mdi:arrow-left-bold$$
@@ -151,10 +151,10 @@ layers:
   - RGB HUI
   - RGB HUD
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - F11
-  - F12
+  - '&work_email'
+  - PG UP
+  - $$mdi:arrow-up-bold$$
+  - PG DN
   - _
   - +
   - OUT USB
@@ -164,10 +164,10 @@ layers:
   - RGB SPI
   - RGB SPD
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - '&work_email'
   - '&pers_email'
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
   - '{'
   - '}'
   - RGB OFF
@@ -277,9 +277,9 @@ combos:
   k: $$mdi:backspace-reverse-outline$$
 - p: [15, 16]
   k: F5
-- p: [16, 17]
+- p: [41, 40]
   k: '{'
-- p: [21, 22]
+- p: [49, 50]
   k: '}'
 - p: [41, 42]
   k: {t: '[', s: '{'}
