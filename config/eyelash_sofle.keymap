@@ -149,13 +149,13 @@
         combo_l_curly { //                          {
             timeout-ms = <COMBO_TM_FAST>;
             require-prior-idle-ms = <PRIOR_IDLE>;  
-            key-positions = <LB3 LB4>;
+            key-positions = <LM1 LM0>;
             bindings = <&kp LBRC>;
         };
         combo_r_curly { //                          }
             timeout-ms = <COMBO_TM_FAST>;
             require-prior-idle-ms = <PRIOR_IDLE>;
-            key-positions = <RB3 RB4>;
+            key-positions = <RM0 RM1>;
             bindings = <&kp RBRC>;
         };
         combo_l_bracket { //                        [
