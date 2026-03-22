@@ -277,9 +277,9 @@ combos:
   k: $$mdi:backspace-reverse-outline$$
 - p: [15, 16]
   k: F5
-- p: [41, 40]
+- p: [30, 31]
   k: '{'
-- p: [49, 50]
+- p: [33, 34]
   k: '}'
 - p: [41, 42]
   k: {t: '[', s: '{'}
