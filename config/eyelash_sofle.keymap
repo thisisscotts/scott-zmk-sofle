@@ -30,6 +30,16 @@
     trigger-period-ms = <16>;
 };
 
+/ {
+	scroll_encoder: scroll_encoder {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
+        tap-ms = <100>;
+    };
+};
+
 // Homerow mods
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4 LB5
@@ -104,6 +114,7 @@
 / {
     combos {
         compatible = "zmk,combos";
+
         // Layers
         combo_tolayer0 {
             timeout-ms = <COMBO_TM_SLOW>;
@@ -125,6 +136,7 @@
             key-positions = <LH1 RH0>;
             bindings = <&to 3>;
         };
+
         // Navigation
         combo_home {
             timeout-ms = <COMBO_TM_FAST>;
@@ -150,6 +162,7 @@
             key-positions = <LT3 LT2>;
             bindings = <&kp F5>;
         };
+
         // Symbols
         combo_l_curly { //                          {
             timeout-ms = <COMBO_TM_FAST>;
@@ -192,6 +205,12 @@
             require-prior-idle-ms = <PRIOR_IDLE>;
             key-positions = <LB2 LB1>;
             bindings = <&kp MINUS>;
+        };
+
+		// Other
+		softoff {
+            bindings = <&soft_off>;
+            key-positions = <14 28 40>;
         };
     };
 };
@@ -243,43 +262,6 @@
 &soft_off { hold-time-ms = <2000>; };
 
 / {
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-        tap-ms = <100>;
-    };
-
-    behaviors {
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-        softoff {
-            bindings = <&soft_off>;
-            key-positions = <14 28 40>;
-        };
-    };
-
-    macros {
-        SHIFT_MCLK: SHIFT_MCLK {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_SHIFT>,
-                <&macro_press>,
-                <&mkp MB3>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LEFT_SHIFT &mkp MB3>;
-
-            label = "SHIFT_MCLK";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
