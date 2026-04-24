@@ -211,7 +211,7 @@
 
 // Tap dances
 
-#define TD_TERM 200
+#define TD_TERM 220
 
 / {
     behaviors {
@@ -219,19 +219,19 @@
 			compatible = "zmk,behavior-tap-dance";
 			#binding-cells = <0>;
 			tapping-term-ms = <TD_TERM>;
-			bindings = <&none>, <&to 0>;
+			bindings = <&none>, <&lct0>;
 		};
 		tdl1: tap_dance_lyr_1 {
 			compatible = "zmk,behavior-tap-dance";
 			#binding-cells = <0>;
 			tapping-term-ms = <TD_TERM>;
-			bindings = <&mo 1>, <&to 1>, <&to 2>, <&to 3>;
+			bindings = <&lcm1>, <&lct1>, <&lct2>, <&lct3>;
 		};
 		tdl2: tap_dance_lyr_2 {
 			compatible = "zmk,behavior-tap-dance";
 			#binding-cells = <0>;
 			tapping-term-ms = <TD_TERM>;
-			bindings = <&mo 2>, <&to 2>;
+			bindings = <&lcm2>, <&lct2>;
 		};
     };
 };
