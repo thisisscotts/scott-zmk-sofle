@@ -278,7 +278,7 @@
 			tap-ms = <0>;
 			bindings
 			    = <&macro_press &to 1>
-			    , <&macro_tap &rgb_ug CLR_YELL>
+			    , <&macro_tap &rgb_ug CLR_YELL>;
 		};
 
 		// Layer 2, coloured momentary
@@ -302,7 +302,7 @@
 			tap-ms = <0>;
 			bindings
 			    = <&macro_press &to 2>
-			    , <&macro_tap &rgb_ug CLR_YELL>
+			    , <&macro_tap &rgb_ug CLR_YELL>;
 		};
     };
 };
