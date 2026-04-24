@@ -262,13 +262,13 @@ layers:
   - $$mdi:backspace-reverse-outline$$
 combos:
 - p: [57, 59]
-  k: {t: LAYER0, h: toggle}
+  k: '&lct0'
 - p: [56, 60]
-  k: {t: LAYER1, h: toggle}
+  k: '&lct1'
 - p: [57, 60]
-  k: {t: LAYER2, h: toggle}
+  k: '&lct2'
 - p: [56, 59]
-  k: {t: LAYER3, h: toggle}
+  k: '&lct3'
 - p: [28, 29]
   k: HOME
 - p: [35, 36]
