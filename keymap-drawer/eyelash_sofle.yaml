@@ -57,11 +57,11 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - LGUI
   - $$mdi:apple-keyboard-option$$
-  - '&lcm1'
+  - '&tdl1'
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
-  - '&lcm2'
+  - '&tdl2'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:backspace-reverse-outline$$
