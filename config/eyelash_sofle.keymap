@@ -113,22 +113,22 @@
         combo_tolayer0 {
             timeout-ms = <COMBO_TM_SLOW>;
             key-positions = <LH0 RH0>;
-            bindings = <&to 0>;
+            bindings = <&lct0>;
         };
         combo_tolayer1 {
             timeout-ms = <COMBO_TM_SLOW>;
             key-positions = <LH1 RH1>;
-            bindings = <&to 1>;
+            bindings = <&lct1>;
         };
         combo_tolayer2 {
             timeout-ms = <COMBO_TM_SLOW>;
             key-positions = <LH0 RH1>;
-            bindings = <&to 2>;
+            bindings = <&lct2>;
         };
         combo_tolayer3 {
             timeout-ms = <COMBO_TM_SLOW>;
             key-positions = <LH1 RH0>;
-            bindings = <&to 3>;
+            bindings = <&lct3>;
         };
 
         // Navigation
@@ -245,6 +245,7 @@
 
 / {
     macros {
+		// Misc
         pers_email: pers_email {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -257,6 +258,19 @@
             bindings
                 = <&macro_tap &kp S &kp C &kp O &kp T &kp T &kp M &kp O &kp R &kp G &kp A &kp N &kp AT &kp C &kp H &kp E &kp V &kp R &kp O &kp N &kp DOT &kp C &kp O &kp M >;
         };
+
+		// Layers
+		// Layer 0, coloured to
+		lct0: lct0 {
+			compatible = "zmk,behavior-macro";
+   			#binding-cells = <0>;
+			wait-ms = <0>;
+			tap-ms = <0>;
+			bindings
+			    = <&macro_press &to 0>
+			    , <&macro_tap &rgb_ug CLR_CERU>;
+		};
+
 		// Layer 1, coloured momentary
 		lcm1: lcm1 {
 			compatible = "zmk,behavior-macro";
@@ -302,7 +316,18 @@
 			tap-ms = <0>;
 			bindings
 			    = <&macro_press &to 2>
-			    , <&macro_tap &rgb_ug CLR_YELL>;
+			    , <&macro_tap &rgb_ug CLR_GREE>;
+		};
+
+		// Layer 3, coloured to
+		lct3: lct3 {
+			compatible = "zmk,behavior-macro";
+   			#binding-cells = <0>;
+			wait-ms = <0>;
+			tap-ms = <0>;
+			bindings
+			    = <&macro_press &to 3>
+			    , <&macro_tap &rgb_ug CLR_PURP>;
 		};
     };
 };
