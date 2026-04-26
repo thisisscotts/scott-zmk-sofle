@@ -219,13 +219,23 @@
 			compatible = "zmk,behavior-tap-dance";
 			#binding-cells = <0>;
 			tapping-term-ms = <TD_TERM>;
-			bindings = <&none>, <&lct0>;
+			bindings = <&none>, <&to 0>;
+			//bindings =
+			//	<&to 0 &rgb_ug CLR_CERU>,   // single tap
+	        //	<&to 1 &rgb_ug CLR_YELL>,   // double tap
+	        //	<&to 2 &rgb_ug CLR_GREE>,   // triple tap
+	        //	<&to 3 &rgb_ug CLR_PURP>;   // quad tap
 		};
 		tdl1: tap_dance_lyr_1 {
 			compatible = "zmk,behavior-tap-dance";
 			#binding-cells = <0>;
 			tapping-term-ms = <TD_TERM>;
-			bindings = <&lcm1>, <&lct1>, <&lct2>, <&lct3>;
+			//bindings = <&lcm1>, <&lct1>, <&lct2>, <&lct3>;
+			bindings =
+				<&to 0 &rgb_ug CLR_CERU>,   // single tap
+	        	<&to 1 &rgb_ug CLR_YELL>,   // double tap
+	        	<&to 2 &rgb_ug CLR_GREE>,   // triple tap
+	        	<&to 3 &rgb_ug CLR_PURP>;   // quad tap
 		};
 		tdl2: tap_dance_lyr_2 {
 			compatible = "zmk,behavior-tap-dance";
