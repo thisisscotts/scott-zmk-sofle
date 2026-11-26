@@ -225,13 +225,13 @@
 			compatible = "zmk,behavior-tap-dance";
 			#binding-cells = <0>;
 			tapping-term-ms = <TD_TERM>;
-			bindings = <&mo 1>, <&to 1>, <&to 2>, <&to 3>;
+			bindings = <&lcm1>, <&to 1>, <&to 2>, <&to 3>;
 		};
 		tdl2: tap_dance_lyr_2 {
 			compatible = "zmk,behavior-tap-dance";
 			#binding-cells = <0>;
 			tapping-term-ms = <TD_TERM>;
-			bindings = <&mo 2>, <&to 2>;
+			bindings = <&lcm2>, <&to 2>;
 		};
     };
 };
