@@ -49,7 +49,7 @@
 #define TAPPING_TERM        280 	// tested down to 200ms. Now reset to original 280
 #define TAPPING_TERM_FAST   180 	// added for home row mod shifts
 #define QUICK_TAP_MS        175
-#define PRIOR_IDLE          80		// changed from 100 to 80ms
+#define PRIOR_IDLE          100		// changed from back to 100 from 80ms
 
 / {
     behaviors {
@@ -75,7 +75,7 @@
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
         };
-	hmls: hml_shift {
+	    hmls: hml_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
@@ -219,29 +219,29 @@
 			compatible = "zmk,behavior-tap-dance";
 			#binding-cells = <0>;
 			tapping-term-ms = <TD_TERM>;
-			bindings = <&none>, <&lct0>;
+			bindings = <&none>, <&to 0>;
 		};
 		tdl1: tap_dance_lyr_1 {
 			compatible = "zmk,behavior-tap-dance";
 			#binding-cells = <0>;
 			tapping-term-ms = <TD_TERM>;
-			bindings = <&lcm1>, <&lct1>, <&lct2>, <&lct3>;
+			bindings = <&mo 1>, <&to 1>, <&to 2>, <&to 3>;
 		};
 		tdl2: tap_dance_lyr_2 {
 			compatible = "zmk,behavior-tap-dance";
 			#binding-cells = <0>;
 			tapping-term-ms = <TD_TERM>;
-			bindings = <&lcm2>, <&lct2>;
+			bindings = <&mo 2>, <&to 2>;
 		};
     };
 };
 
 // Macros
 
-#define CLR_CERU			RGB_COLOR_HSB(180, 100, 100)
-#define CLR_YELL			RGB_COLOR_HSB( 60, 100, 100)
-#define CLR_GREE			RGB_COLOR_HSB(120, 100, 100)
-#define CLR_PURP			RGB_COLOR_HSB(280, 100, 100)
+#define CLR_CERU			RGB_COLOR_HSB(180, 100, 50)
+#define CLR_YELL			RGB_COLOR_HSB( 60, 100, 50)
+#define CLR_GREE			RGB_COLOR_HSB(120, 100, 50)
+#define CLR_PURP			RGB_COLOR_HSB(280, 100, 50)
 
 / {
     macros {
